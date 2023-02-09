@@ -15,10 +15,10 @@
 
 # Add a feed source
 git checkout a9553c7666bcef688b5a6deee5974f5fd8446219
+sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 sed -i '$a src-git passssr https://github.com/sbwml/openwrt_helloworld' feeds.conf.default
 # sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall.git;packages' feeds.conf.default
 # sed -i '$a src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci' feeds.conf.default
-# sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
 # sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
