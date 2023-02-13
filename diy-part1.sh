@@ -8,3 +8,4 @@ git checkout 1b4d4fe283de028826dd3d112a5132e063e61e30
 cd -
 cp -rf ./package/lean/passwall_package/* ./package/lean/passwall
 rm -rf ./package/lean/passwall_package
+sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' ./target/linux/x86/Makefile
